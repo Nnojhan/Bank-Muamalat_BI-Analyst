@@ -1,0 +1,15 @@
+CREATE OR REPLACE TABLE `rakamin-muamalat-bi-silmi-n.muamalat.master_table` AS
+SELECT 
+  c.CustomerCleanEmail AS cust_email,
+  c.CustomerCity AS cust_city,
+  o.Date AS order_date,
+  o.Quantity AS order_qty,
+  p.ProdName AS product_name,
+  p.Price AS product_price,
+  pc.CategoryName AS category_name,
+  (o.Quantity * p.Price) AS total_sales
+FROM `rakamin-muamalat-bi-silmi-n.muamalat.orders_muamalat` o
+JOIN `rakamin-muamalat-bi-silmi-n.muamalat.clean_customers_muamalat` c ON o.CustomerID = c.CustomerID
+JOIN `rakamin-muamalat-bi-silmi-n.muamalat.clean_products` p ON o.ProdNumber = p.ProdNumber
+JOIN `rakamin-muamalat-bi-silmi-n.muamalat.product category_muamalat` pc ON p.Category = pc.CategoryID
+ORDER BY o.Date ASC;
