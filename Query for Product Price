@@ -1,0 +1,7 @@
+CREATE TABLE `rakamin-muamalat-bi-silmi-n.muamalat.clean_products` AS
+SELECT 
+  ProdNumber,
+  ProdName,
+  Category,
+  (SAFE_CAST(Price AS FLOAT64) / 100) AS Price
+FROM `rakamin-muamalat-bi-silmi-n.muamalat.products_muamalat`;
