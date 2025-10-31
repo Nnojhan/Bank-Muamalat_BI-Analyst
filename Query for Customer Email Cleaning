@@ -1,0 +1,14 @@
+CREATE TABLE `rakamin-muamalat-bi-silmi-n.muamalat.clean_customers_muamalat` AS
+SELECT 
+  DISTINCT
+  CustomerID,
+  REGEXP_REPLACE(CustomerEmail, r'#mailto:.*?#', '') AS CustomerCleanEmail,
+  TRIM(CustomerCity) AS CustomerCity,
+  COALESCE(TRIM(CustomerState), 'Unknown') AS CustomerState,
+  FirstName,
+  LastName,
+  CustomerPhone,
+  CustomerAddress,
+  CustomerZip
+FROM `rakamin-muamalat-bi-silmi-n.muamalat.customers_muamalat`
+WHERE CustomerID IS NOT NULL;
