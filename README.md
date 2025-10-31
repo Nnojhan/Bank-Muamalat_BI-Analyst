@@ -1,5 +1,5 @@
 # 🧠 PT Sejahtera Bersama Sales Analysis  
-### Final Task – Bank Muamalat Business Intelligence Analyst Virtual Internship (Rakamin 2025)  
+### Final Task – Bank Muamalat Business Intelligence Analyst Project-Based Internship by Rakamin Academy  
 by **Silmi Nur Jannah**
 
 ---
@@ -16,6 +16,7 @@ The project focuses on how data can be **cleaned, transformed, and visualized** 
 The final dashboard was built using **Looker Studio (Google Data Studio)**, connected directly to BigQuery for real-time insights.  
 
 🔗 **Dashboard Link:** (https://lookerstudio.google.com/reporting/bc3490bc-6ec4-4fbc-a540-4954d281bc1b)
+
 🔗 **Presentation Link:** (https://docs.google.com/presentation/d/1P0eGrecz1k4gxB6Eum6gvDSawvLQeyPTQYo9I2xWhxQ/edit?usp=sharing)
 
 ## 📈 Project Outcome
